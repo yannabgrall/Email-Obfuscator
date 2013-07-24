@@ -144,8 +144,26 @@
 		</script>
 
 		<!-- Place the code below where you want the link to be displayed -->
-		<script>var eo=document.createElement("span");eo.innerHTML="<n uers=\"znvygb:uv12@sybevnaorefvre.pbz\" gnetrg=\"_oynax\">uv12@sybevnaorefvre.pbz</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});document.body.appendChild(eo);</script>
+		<!-- <script>var eo=document.createElement("span");eo.innerHTML="<n uers=\"znvygb:uv12@sybevnaorefvre.pbz\" gnetrg=\"_oynax\">uv12@sybevnaorefvre.pbz</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});document.body.appendChild(eo);</script> -->
+		<!--
+		<script id="obfuscate">
+			var scr = document.getElementById("obfuscate");
+			var eo = document.createElement("span");
+			eo.innerHTML = '<n uers="znvygb:uv12@sybevnaorefvre.pbz" gnetrg="_oynax">uv12@sybevnaorefvre.pbz</n>'.replace(/[a-zA-Z]/g, function ( c ) {
+				return String.fromCharCode( ( c <= "Z" ? 90 : 122 ) >= ( c = c.charCodeAt(0) + 13 ) ? c : c - 26 )
+			});
+			scr.parentNode.insertBefore(eo, scr);
+			// document.body.appendChild(eo);
+		</script>
 		<noscript><span style="unicode-bidi:bidi-override;direction:rtl;">moc.reisrebnairolf@21ih</span></noscript>
+		-->
+
+		<p>
+			Test Blablabla
+			<!--Place the code below where you want the link to be displayed-->
+			<script id="obfuscate">var scr=document.getElementById("obfuscate");var eo=document.createElement("span");eo.innerHTML="<n uers=\"znvygb:uryyb@lnaanotenyy.pbz\" >r-znvy</n>".replace(/[a-z0-9]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});scr.parentNode.insertBefore(eo, scr);</script>
+			<noscript><span style="unicode-bidi:bidi-override;direction:rtl;">moc.llargbannay@olleh</span></noscript>
+		</p>
 
 		<div class="wrapper">
 			<h1>Email Obfuscator</h1>
@@ -224,12 +242,12 @@
 			$("#html5").on("change", function () {
 				var ht = ' type="text/javascript"';
 
-				if ( $(this).is(':checked') ){ var ht = ''; }
+				if ( $(this).is(':checked') ){ ht = ''; }
 
 				$("#target").on("change", function () {
 					var target = '';
 
-					if ( $(this).is(':checked') ) { var target = 'gnetrg=\\"_oynax\\"'; }
+					if ( $(this).is(':checked') ) { target = 'gnetrg=\\"_oynax\\"'; }
 
 					$("input").on("keyup", function () {
 						var $email    = $("#email").val(),
@@ -252,7 +270,7 @@
 
 						var help     = '<!--Place the code below where you want the link to be displayed-->',
 							noscript = '<noscript><span style="unicode-bidi:bidi-override;direction:rtl;">' + $emailrev + '</span></noscript>',
-							code     = help + '\n<script'+ ht +'>'+'var eo=document.createElement("span");eo.innerHTML="<n uers=\\"znvygb:' + $emailb + $subjectb +'\\" '+ target +'>' + $anchorb + '</n>\".replace(/[a-z0-9]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});document.body.appendChild(eo);'+'<\/script>\n' + noscript;
+							code     = help + '\n<script id="obfuscate"' + ht + '>' + 'var scr=document.getElementById("obfuscate");var eo=document.createElement("span");eo.innerHTML="<n uers=\\"znvygb:' + $emailb + $subjectb + '\\" ' + target + '>' + $anchorb + '</n>\".replace(/[a-z0-9]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});scr.parentNode.insertBefore(eo, scr);' + '<\/script>\n' + noscript;
 
 						$("#result").val(code);
 
